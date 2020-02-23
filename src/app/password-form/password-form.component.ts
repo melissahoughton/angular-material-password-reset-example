@@ -30,7 +30,8 @@ export class PasswordFormComponent implements OnInit {
         Validators.required,
         Validators.minLength(8),
         Validators.pattern(/\d/),
-        Validators.pattern(/[A-Za-z]/)]
+        Validators.pattern(/[A-Za-z]/),
+        /* Other validators here */]
       ]
     });
   }
