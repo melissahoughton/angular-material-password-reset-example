@@ -22,11 +22,11 @@ export class PasswordFormComponent implements OnInit {
     });
 
     this.secondFormGroup = this.fb.group({
-      smsCode: ['', [Validators.required, Validators.maxLength(6)]]
+      smsCode: ['', [Validators.required, Validators.minLength(6)]]
     });
 
     this.thirdFormGroup = this.fb.group({
-      password: ['', [Validators.required]]
+      password: ['', [Validators.required, Validators.minLength(8) /* Other validators here */]]
     });
   }
 
@@ -38,7 +38,7 @@ export class PasswordFormComponent implements OnInit {
 
   getSmsCodeErrorMessage() {
     return this.smsCode.hasError('required') ? 'SMS Code is required' :
-      this.smsCode.hasError('length') ? 'SMS Code must be six digits long' :
+      this.smsCode.hasError('minLength') ? 'SMS Code must be six digits long' :
         '';
   }
 
