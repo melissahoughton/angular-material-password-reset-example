@@ -4,7 +4,8 @@ import { PasswordFormComponent } from './password-form/password-form.component';
 
 
 const routes: Routes = [
-  { path: 'password-reset', component: PasswordFormComponent }
+  { path: '', component: PasswordFormComponent },
+  { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 
 @NgModule({
