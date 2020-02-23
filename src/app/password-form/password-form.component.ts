@@ -26,7 +26,12 @@ export class PasswordFormComponent implements OnInit {
     });
 
     this.thirdFormGroup = this.fb.group({
-      password: ['', [Validators.required, Validators.minLength(8) /* Other validators here */]]
+      password: ['', [
+        Validators.required,
+        Validators.minLength(8),
+        Validators.pattern(/\d/),
+        Validators.pattern(/[A-Za-z]/)]
+      ]
     });
   }
 
@@ -46,5 +51,4 @@ export class PasswordFormComponent implements OnInit {
   get email() { return this.firstFormGroup.get('email'); }
   get smsCode() { return this.secondFormGroup.get('smsCode'); }
   get password() { return this.thirdFormGroup.get('password'); }
-
 }

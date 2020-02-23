@@ -1,6 +1,8 @@
-# Password Reset Example
+# Angular Material Password Reset Example
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+
+It uses [Angular Material](https://material.angular.io)
 
 ## Development server
 
